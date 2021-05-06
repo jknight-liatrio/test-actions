@@ -1,7 +1,8 @@
 name: Test Push
 
 on:
-  push
+  - push
+  - delete
 
 jobs:
   test-push:
