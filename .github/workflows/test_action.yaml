@@ -1,7 +1,8 @@
 name: Test Push
 
 on:
-  push
+  - push
+  - delete
 
 jobs:
   test-push:
@@ -16,4 +17,6 @@ jobs:
 
       - run: |
           env
+          echo $GITHUB_EVENT_PATH
+          cat $GITHUB_EVENT_PATH
         name: Pushed something...
